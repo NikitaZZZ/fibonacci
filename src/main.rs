@@ -1,7 +1,7 @@
 use std::io;
 
 fn main() {
-    let mut result_array: Vec<usize> = Vec::new();
+    let mut result_array: Vec<u128> = Vec::new();
 
     println!("Enter the index of the number to calculate the fibonacci .");
     let mut fibonacci_number = String::new();
@@ -12,7 +12,7 @@ fn main() {
     let fibonacci_number: usize = fibonacci_number.trim().parse().expect("Error parsing number");
 
     for i in 0..fibonacci_number+1 {
-        if i == 0 || i == 1 { result_array.push(i); }
+        if i == 0 || i == 1 { result_array.push(i as u128); }
         else {
             let result = result_array[i-1] + result_array[i-2];
             result_array.push(result);
